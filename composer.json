@@ -1,0 +1,32 @@
+{
+  "name": "threelittlebits/dummy",
+  "description": "A simple library to generate dummy data for testing purposes",
+  "type": "library",
+  "version": "1.0.0",
+  "require": {
+    "php": ">=8.2",
+    "ext-ctype": "*",
+    "fakerphp/faker": "^1.23"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "TLB\\Dummy\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TLB\\Dummy\\Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Cisco Delgado",
+      "email": "fdelgados@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable"
+}
