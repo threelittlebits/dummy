@@ -231,7 +231,7 @@ if (!function_exists('zero')) {
      *
      * @return int
      */
-    function integer(): int
+    function zero(): int
     {
         return 0;
     }
@@ -246,7 +246,7 @@ if (!function_exists('decimal')) {
      *
      * @return float
      */
-    function integer(float $min, float $max): float
+    function decimal(float $min, float $max): float
     {
         $decimal = call_user_func(
             ['TLB\Dummy\Primitives\Decimal', 'between'],
