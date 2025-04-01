@@ -380,7 +380,7 @@ if (!function_exists('email')) {
     function email(): string
     {
         $email = call_user_func(
-            ['TLB\Dummy\Internet\Email', 'email'],
+            ['TLB\Dummy\Internet\Email', 'random'],
         );
 
         return $email->get();
