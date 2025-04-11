@@ -396,3 +396,16 @@ if (!function_exists('email')) {
         return $email->get();
     }
 }
+
+if (!function_exists('sha256')) {
+    /**
+     * Get the value of a sha256 hash.
+     *
+     * @return string
+     */
+    function sha256(): string {
+        return call_user_func(
+            ['\Faker\Provider\Miscellaneous', 'sha256'],
+        );
+    }
+}
