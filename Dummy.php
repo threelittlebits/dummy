@@ -294,22 +294,32 @@ if (!function_exists('nan')) {
     }
 }
 
-if (!function_exists('identifier')) {
+if (!function_exists('guid_v4')) {
     /**
-     * Get the value of optional.
-     *
-     * @param string $type
+     * Get a UUID v4.
      *
      * @return string
      */
-    function identifier(string $type): string
+    function guid_v4(): string
     {
-        if (!in_array($type, ['uuid', 'uuid4'])) {
-            throw new InvalidArgumentException('Invalid identifier type');
-        }
-
         $identifier = call_user_func(
-            ['TLB\Dummy\Misc\Identifier', $type]
+            ['TLB\Dummy\Misc\Identifier', 'uuid4'],
+        );
+
+        return $identifier->get();
+    }
+}
+
+if (!function_exists('guid_v7')) {
+    /**
+     * Get a UUID v7.
+     *
+     * @return string
+     */
+    function guid_v7(): string
+    {
+        $identifier = call_user_func(
+            ['TLB\Dummy\Misc\Identifier', 'uuid7'],
         );
 
         return $identifier->get();
