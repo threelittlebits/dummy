@@ -409,3 +409,19 @@ if (!function_exists('sha256')) {
         );
     }
 }
+
+if (!function_exists('random')) {
+    /**
+     * Get the value of a random.
+     *
+     * @param mixed ...$args
+     * @return mixed
+     */
+    function random(mixed ...$args): mixed
+    {
+        return call_user_func(
+            ['TLB\Dummy\Misc\Utils', 'randomElement'],
+            $args
+        );
+    }
+}
